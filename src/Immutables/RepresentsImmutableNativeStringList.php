@@ -1,0 +1,19 @@
+<?php declare(strict_types=1);
+
+namespace ComponoKit\Types\Lists\Interfaces\Immutable;
+
+use ComponoKit\Types\Lists\Interfaces\RepresentsNativeStringList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsStringList;
+
+interface RepresentsImmutableNativeStringList extends RepresentsNativeStringList
+{
+	public function append( string...$values ): static;
+
+	public function prepend( string...$values ): static;
+
+	public function remove( int $index ): static;
+
+	public function appendList( RepresentsNativeStringList|RepresentsStringList $list ): static;
+
+	public function prependList( RepresentsNativeStringList|RepresentsStringList $list ): static;
+}

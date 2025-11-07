@@ -1,0 +1,19 @@
+<?php declare(strict_types=1);
+
+namespace ComponoKit\Types\Lists\Interfaces\Mutable;
+
+use ComponoKit\Types\Lists\Interfaces\RepresentsNativeMixedTypeList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsMixedTypeList;
+
+interface RepresentsMutableNativeMixedTypeList extends RepresentsNativeMixedTypeList
+{
+	public function append( int|float|string|bool|array...$values ): void;
+
+	public function prepend( int|float|string|bool|array...$values ): void;
+
+	public function remove( int $index ): void;
+
+	public function appendList( RepresentsNativeMixedTypeList|RepresentsMixedTypeList $list ): void;
+
+	public function prependList( RepresentsNativeMixedTypeList|RepresentsMixedTypeList $list ): void;
+}

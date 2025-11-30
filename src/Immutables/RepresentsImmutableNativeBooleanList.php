@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace ComponoKit\Types\Lists\Interfaces\Immutable;
+namespace ComponoKit\Types\Lists\Interfaces\Immutables;
 
 use ComponoKit\Types\Lists\Interfaces\RepresentsBooleanList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsNativeBooleanList;

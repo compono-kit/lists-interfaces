@@ -13,9 +13,7 @@ interface RepresentsNativeFloatList extends RepresentsType, \Iterator, \Countabl
 	 */
 	public function toNativeType(): array;
 
-	public function get( int $index ): float;
+	public function current(): float;
 
 	public function count(): int;
-
-	public function current(): float;
 }

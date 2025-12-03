@@ -13,9 +13,7 @@ interface RepresentsNativeIntegerList extends RepresentsType, \Iterator, \Counta
 	 */
 	public function toNativeType(): array;
 
-	public function get( int $index ): int;
+	public function current(): int;
 
 	public function count(): int;
-
-	public function current(): int;
 }

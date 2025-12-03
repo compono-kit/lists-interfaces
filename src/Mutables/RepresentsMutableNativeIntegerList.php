@@ -11,8 +11,6 @@ interface RepresentsMutableNativeIntegerList extends RepresentsNativeIntegerList
 
 	public function prepend( int...$values ): void;
 
-	public function remove( int $index ): void;
-
 	public function appendList( RepresentsNativeIntegerList|RepresentsIntegerList $list ): void;
 
 	public function prependList( RepresentsNativeIntegerList|RepresentsIntegerList $list ): void;

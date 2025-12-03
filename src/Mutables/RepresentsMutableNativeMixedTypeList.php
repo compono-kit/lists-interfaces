@@ -11,8 +11,6 @@ interface RepresentsMutableNativeMixedTypeList extends RepresentsNativeMixedType
 
 	public function prepend( int|float|string|bool|array...$values ): void;
 
-	public function remove( int $index ): void;
-
 	public function appendList( RepresentsNativeMixedTypeList|RepresentsMixedTypeList $list ): void;
 
 	public function prependList( RepresentsNativeMixedTypeList|RepresentsMixedTypeList $list ): void;

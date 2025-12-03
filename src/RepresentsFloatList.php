@@ -12,7 +12,7 @@ interface RepresentsFloatList extends RepresentsType, \Iterator, \Countable
 	/**
 	 * @return array<int, RepresentsFloat>
 	 */
-	public function toNativeType(  ):array;
+	public function toNativeType(): array;
 
 	/**
 	 * @return array<int, float>
@@ -24,9 +24,7 @@ interface RepresentsFloatList extends RepresentsType, \Iterator, \Countable
 	 */
 	public function iterateFloats(): \Iterator;
 
-	public function get( int $index ): RepresentsFloat;
+	public function current(): RepresentsFloat;
 
 	public function count(): int;
-
-	public function current(): RepresentsFloat;
 }

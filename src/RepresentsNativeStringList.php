@@ -13,9 +13,7 @@ interface RepresentsNativeStringList extends RepresentsType, \Iterator, \Countab
 	 */
 	public function toNativeType(): array;
 
-	public function get( int $index ): string;
+	public function current(): string;
 
 	public function count(): int;
-
-	public function current(): string;
 }

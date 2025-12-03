@@ -11,8 +11,6 @@ interface RepresentsMutableStringList extends RepresentsStringList
 
 	public function prepend( RepresentsString...$types ): void;
 
-	public function remove( int $index ): void;
-
 	public function appendList( RepresentsStringList $list ): void;
 
 	public function prependList( RepresentsStringList $list ): void;

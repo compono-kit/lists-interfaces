@@ -13,9 +13,7 @@ interface RepresentsNativeBooleanList extends RepresentsType, \Iterator, \Counta
 	 */
 	public function toNativeType(): array;
 
-	public function get( int $index ): bool;
+	public function current(): bool;
 
 	public function count(): int;
-
-	public function current(): bool;
 }

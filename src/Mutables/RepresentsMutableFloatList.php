@@ -11,8 +11,6 @@ interface RepresentsMutableFloatList extends RepresentsFloatList
 
 	public function prepend( RepresentsFloat...$types ): void;
 
-	public function remove( int $index ): void;
-
 	public function appendList( RepresentsFloatList $list ): void;
 
 	public function prependList( RepresentsFloatList $list ): void;

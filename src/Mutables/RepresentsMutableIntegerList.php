@@ -11,8 +11,6 @@ interface RepresentsMutableIntegerList extends RepresentsIntegerList
 
 	public function prepend( RepresentsInteger...$types ): void;
 
-	public function remove( int $index ): void;
-
 	public function appendList( RepresentsIntegerList $list ): void;
 
 	public function prependList( RepresentsIntegerList $list ): void;

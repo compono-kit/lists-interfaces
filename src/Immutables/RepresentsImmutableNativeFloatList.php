@@ -7,11 +7,15 @@ use ComponoKit\Types\Lists\Interfaces\RepresentsNativeFloatList;
 
 interface RepresentsImmutableNativeFloatList extends RepresentsNativeFloatList
 {
+	public function get( int $index ): float;
+
+	public function set( int $index, float $value ): static;
+
+	public function remove( int $index ): static;
+
 	public function append( float...$values ): static;
 
 	public function prepend( float...$values ): static;
-
-	public function remove( int $index ): static;
 
 	public function appendList( RepresentsNativeFloatList|RepresentsFloatList $list ): static;
 

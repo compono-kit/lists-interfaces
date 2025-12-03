@@ -11,8 +11,6 @@ interface RepresentsMutableBooleanList extends RepresentsBooleanList
 
 	public function prepend( RepresentsBoolean...$types ): void;
 
-	public function remove( int $index ): void;
-
 	public function appendList( RepresentsBooleanList $list ): void;
 
 	public function prependList( RepresentsBooleanList $list ): void;

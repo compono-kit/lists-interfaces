@@ -12,7 +12,7 @@ interface RepresentsBooleanList extends RepresentsType, \Iterator, \Countable
 	/**
 	 * @return array<int, RepresentsBoolean>
 	 */
-	public function toNativeType(  ):array;
+	public function toNativeType(): array;
 
 	/**
 	 * @return array<int, bool>
@@ -24,9 +24,7 @@ interface RepresentsBooleanList extends RepresentsType, \Iterator, \Countable
 	 */
 	public function iterateBooleans(): \Iterator;
 
-	public function get( int $index ): RepresentsBoolean;
+	public function current(): RepresentsBoolean;
 
 	public function count(): int;
-
-	public function current(): RepresentsBoolean;
 }

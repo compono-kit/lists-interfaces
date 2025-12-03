@@ -23,9 +23,7 @@ interface RepresentsMixedTypeList extends RepresentsType, \Iterator, \Countable
 	 */
 	public function iterateNativeTypes(): \Iterator;
 
-	public function get( int $index ): RepresentsType;
+	public function current(): RepresentsType;
 
 	public function count(): int;
-
-	public function current(): RepresentsType;
 }

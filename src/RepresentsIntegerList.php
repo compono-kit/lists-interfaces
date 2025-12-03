@@ -12,7 +12,7 @@ interface RepresentsIntegerList extends RepresentsType, \Iterator, \Countable
 	/**
 	 * @return array<int, RepresentsInteger>
 	 */
-	public function toNativeType(  ):array;
+	public function toNativeType(): array;
 
 	/**
 	 * @return array<int, int>
@@ -24,9 +24,7 @@ interface RepresentsIntegerList extends RepresentsType, \Iterator, \Countable
 	 */
 	public function iterateIntegers(): \Iterator;
 
-	public function get( int $index ): RepresentsInteger;
+	public function current(): RepresentsInteger;
 
 	public function count(): int;
-
-	public function current(): RepresentsInteger;
 }

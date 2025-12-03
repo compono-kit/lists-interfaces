@@ -11,8 +11,6 @@ interface RepresentsMutableMixedTypeList extends RepresentsMixedTypeList
 
 	public function prepend( RepresentsType...$types ): void;
 
-	public function remove( int $index ): void;
-
 	public function appendList( RepresentsMixedTypeList $list ): void;
 
 	public function prependList( RepresentsMixedTypeList $list ): void;

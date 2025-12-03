@@ -11,8 +11,6 @@ interface RepresentsMutableNativeStringList extends RepresentsNativeStringList
 
 	public function prepend( string...$values ): void;
 
-	public function remove( int $index ): void;
-
 	public function appendList( RepresentsNativeStringList|RepresentsStringList $list ): void;
 
 	public function prependList( RepresentsNativeStringList|RepresentsStringList $list ): void;

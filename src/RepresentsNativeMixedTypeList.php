@@ -13,9 +13,7 @@ interface RepresentsNativeMixedTypeList extends RepresentsType, \Iterator, \Coun
 	 */
 	public function toNativeType(): array;
 
-	public function get( int $index ): int|float|string|bool|array;
+	public function current(): int|float|string|bool|array;
 
 	public function count(): int;
-
-	public function current(): int|float|string|bool|array;
 }

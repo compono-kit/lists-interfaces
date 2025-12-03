@@ -11,8 +11,6 @@ interface RepresentsMutableNativeFloatList extends RepresentsNativeFloatList
 
 	public function prepend( float...$values ): void;
 
-	public function remove( int $index ): void;
-
 	public function appendList( RepresentsNativeFloatList|RepresentsFloatList $list ): void;
 
 	public function prependList( RepresentsNativeFloatList|RepresentsFloatList $list ): void;

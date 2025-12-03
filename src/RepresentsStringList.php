@@ -24,9 +24,7 @@ interface RepresentsStringList extends RepresentsType, \Iterator, \Countable
 	 */
 	public function iterateStrings(): \Iterator;
 
-	public function get( int $index ): RepresentsString;
+	public function current(): RepresentsString;
 
 	public function count(): int;
-
-	public function current(): RepresentsString;
 }

@@ -3,9 +3,8 @@
 namespace ComponoKit\Types\Lists\Interfaces;
 
 use ComponoKit\Types\Interfaces\RepresentsInteger;
-use ComponoKit\Types\Interfaces\RepresentsType;
 
-interface RepresentsIntegerList extends RepresentsType, \Iterator, \Countable
+interface RepresentsIntegerList extends RepresentsList
 {
 	public function equalsValues( RepresentsIntegerList $list ): bool;
 
@@ -25,6 +24,4 @@ interface RepresentsIntegerList extends RepresentsType, \Iterator, \Countable
 	public function iterateIntegers(): \Iterator;
 
 	public function current(): RepresentsInteger;
-
-	public function count(): int;
 }

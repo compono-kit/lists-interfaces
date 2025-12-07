@@ -3,9 +3,8 @@
 namespace ComponoKit\Types\Lists\Interfaces;
 
 use ComponoKit\Types\Interfaces\RepresentsBoolean;
-use ComponoKit\Types\Interfaces\RepresentsType;
 
-interface RepresentsBooleanList extends RepresentsType, \Iterator, \Countable
+interface RepresentsBooleanList extends RepresentsList
 {
 	public function equalsValues( RepresentsBooleanList $list ): bool;
 
@@ -25,6 +24,4 @@ interface RepresentsBooleanList extends RepresentsType, \Iterator, \Countable
 	public function iterateBooleans(): \Iterator;
 
 	public function current(): RepresentsBoolean;
-
-	public function count(): int;
 }

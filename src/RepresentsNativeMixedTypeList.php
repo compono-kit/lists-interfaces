@@ -2,9 +2,7 @@
 
 namespace ComponoKit\Types\Lists\Interfaces;
 
-use ComponoKit\Types\Interfaces\RepresentsType;
-
-interface RepresentsNativeMixedTypeList extends RepresentsType, \Iterator, \Countable
+interface RepresentsNativeMixedTypeList extends RepresentsList
 {
 	public function equalsValues( RepresentsNativeMixedTypeList $list ): bool;
 
@@ -14,6 +12,4 @@ interface RepresentsNativeMixedTypeList extends RepresentsType, \Iterator, \Coun
 	public function toNativeType(): array;
 
 	public function current(): int|float|string|bool|array;
-
-	public function count(): int;
 }

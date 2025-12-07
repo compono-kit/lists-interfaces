@@ -3,9 +3,8 @@
 namespace ComponoKit\Types\Lists\Interfaces;
 
 use ComponoKit\Types\Interfaces\RepresentsFloat;
-use ComponoKit\Types\Interfaces\RepresentsType;
 
-interface RepresentsFloatList extends RepresentsType, \Iterator, \Countable
+interface RepresentsFloatList extends RepresentsList
 {
 	public function equalsValues( RepresentsFloatList $list ): bool;
 
@@ -25,6 +24,4 @@ interface RepresentsFloatList extends RepresentsType, \Iterator, \Countable
 	public function iterateFloats(): \Iterator;
 
 	public function current(): RepresentsFloat;
-
-	public function count(): int;
 }

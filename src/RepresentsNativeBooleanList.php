@@ -2,9 +2,7 @@
 
 namespace ComponoKit\Types\Lists\Interfaces;
 
-use ComponoKit\Types\Interfaces\RepresentsType;
-
-interface RepresentsNativeBooleanList extends RepresentsType, \Iterator, \Countable
+interface RepresentsNativeBooleanList extends RepresentsList
 {
 	public function equalsValues( RepresentsNativeBooleanList $list ): bool;
 
@@ -14,6 +12,4 @@ interface RepresentsNativeBooleanList extends RepresentsType, \Iterator, \Counta
 	public function toNativeType(): array;
 
 	public function current(): bool;
-
-	public function count(): int;
 }

@@ -3,9 +3,8 @@
 namespace ComponoKit\Types\Lists\Interfaces;
 
 use ComponoKit\Types\Interfaces\RepresentsString;
-use ComponoKit\Types\Interfaces\RepresentsType;
 
-interface RepresentsStringList extends RepresentsType, \Iterator, \Countable
+interface RepresentsStringList extends RepresentsList
 {
 	public function equalsValues( RepresentsStringList $list ): bool;
 
@@ -25,6 +24,4 @@ interface RepresentsStringList extends RepresentsType, \Iterator, \Countable
 	public function iterateStrings(): \Iterator;
 
 	public function current(): RepresentsString;
-
-	public function count(): int;
 }

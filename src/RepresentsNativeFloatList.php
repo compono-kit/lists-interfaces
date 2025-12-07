@@ -2,9 +2,7 @@
 
 namespace ComponoKit\Types\Lists\Interfaces;
 
-use ComponoKit\Types\Interfaces\RepresentsType;
-
-interface RepresentsNativeFloatList extends RepresentsType, \Iterator, \Countable
+interface RepresentsNativeFloatList extends RepresentsList
 {
 	public function equalsValues( RepresentsNativeFloatList $list ): bool;
 
@@ -14,6 +12,4 @@ interface RepresentsNativeFloatList extends RepresentsType, \Iterator, \Countabl
 	public function toNativeType(): array;
 
 	public function current(): float;
-
-	public function count(): int;
 }

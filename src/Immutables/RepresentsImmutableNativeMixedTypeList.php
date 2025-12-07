@@ -13,7 +13,7 @@ interface RepresentsImmutableNativeMixedTypeList extends RepresentsNativeMixedTy
 
 	public function set( int $index, int|float|string|bool|array $value ): static;
 
-	public function remove( int|float|string|bool|array $index ): static;
+	public function remove( int $index ): static;
 
 	public function append( int|float|string|bool|array...$values ): static;
 

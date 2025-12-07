@@ -7,13 +7,13 @@ use ComponoKit\Types\Lists\Interfaces\RepresentsStringList;
 
 interface RepresentsImmutableStringList extends RepresentsStringList
 {
+	public function exists( int $index ): bool;
+
 	public function get( int $index ): RepresentsString;
 
 	public function set( int $index, RepresentsString $value ): static;
 
 	public function remove( int $index ): static;
-
-	public function exists( int $index ): bool;
 
 	public function append( RepresentsString...$types ): static;
 

@@ -7,13 +7,13 @@ use ComponoKit\Types\Lists\Interfaces\RepresentsNativeIntegerList;
 
 interface RepresentsImmutableNativeIntegerList extends RepresentsNativeIntegerList
 {
+	public function exists( int $index ): bool;
+
 	public function get( int $index ): int;
 
 	public function set( int $index, int $value ): static;
 
 	public function remove( int $index ): static;
-
-	public function exists( int $index ): bool;
 
 	public function append( int...$values ): static;
 

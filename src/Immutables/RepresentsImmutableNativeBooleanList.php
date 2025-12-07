@@ -7,13 +7,13 @@ use ComponoKit\Types\Lists\Interfaces\RepresentsNativeBooleanList;
 
 interface RepresentsImmutableNativeBooleanList extends RepresentsNativeBooleanList
 {
+	public function exists( int $index ): bool;
+
 	public function get( int $index ): bool;
 
 	public function set( int $index, bool $value ): static;
 
 	public function remove( int $index ): static;
-
-	public function exists( int $index ): bool;
 
 	public function append( bool...$values ): static;
 

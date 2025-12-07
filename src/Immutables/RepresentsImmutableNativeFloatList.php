@@ -7,13 +7,13 @@ use ComponoKit\Types\Lists\Interfaces\RepresentsNativeFloatList;
 
 interface RepresentsImmutableNativeFloatList extends RepresentsNativeFloatList
 {
+	public function exists( int $index ): bool;
+
 	public function get( int $index ): float;
 
 	public function set( int $index, float $value ): static;
 
 	public function remove( int $index ): static;
-
-	public function exists( int $index ): bool;
 
 	public function append( float...$values ): static;
 

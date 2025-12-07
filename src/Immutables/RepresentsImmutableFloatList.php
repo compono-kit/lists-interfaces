@@ -7,13 +7,13 @@ use ComponoKit\Types\Lists\Interfaces\RepresentsFloatList;
 
 interface RepresentsImmutableFloatList extends RepresentsFloatList
 {
+	public function exists( int $index ): bool;
+
 	public function get( int $index ): RepresentsFloat;
 
 	public function set( int $index, RepresentsFloat $value ): static;
 
 	public function remove( int $index ): static;
-
-	public function exists( int $index ): bool;
 
 	public function append( RepresentsFloat...$types ): static;
 

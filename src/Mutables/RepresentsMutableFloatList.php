@@ -5,7 +5,7 @@ namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 use ComponoKit\Types\Interfaces\RepresentsFloat;
 use ComponoKit\Types\Lists\Interfaces\RepresentsFloatList;
 
-interface RepresentsMutableFloatList extends RepresentsFloatList
+interface RepresentsMutableFloatList extends RepresentsFloatList, \ArrayAccess
 {
 	public function append( RepresentsFloat...$types ): void;
 

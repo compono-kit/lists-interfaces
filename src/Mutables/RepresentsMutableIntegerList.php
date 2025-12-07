@@ -5,7 +5,7 @@ namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 use ComponoKit\Types\Interfaces\RepresentsInteger;
 use ComponoKit\Types\Lists\Interfaces\RepresentsIntegerList;
 
-interface RepresentsMutableIntegerList extends RepresentsIntegerList
+interface RepresentsMutableIntegerList extends RepresentsIntegerList, \ArrayAccess
 {
 	public function append( RepresentsInteger...$types ): void;
 

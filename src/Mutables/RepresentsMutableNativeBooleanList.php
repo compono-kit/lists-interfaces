@@ -5,7 +5,7 @@ namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 use ComponoKit\Types\Lists\Interfaces\RepresentsBooleanList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsNativeBooleanList;
 
-interface RepresentsMutableNativeBooleanList extends RepresentsNativeBooleanList
+interface RepresentsMutableNativeBooleanList extends RepresentsNativeBooleanList, \ArrayAccess
 {
 	public function append( bool...$values ): void;
 

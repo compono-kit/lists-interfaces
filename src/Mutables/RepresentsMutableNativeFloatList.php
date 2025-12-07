@@ -5,7 +5,7 @@ namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 use ComponoKit\Types\Lists\Interfaces\RepresentsFloatList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsNativeFloatList;
 
-interface RepresentsMutableNativeFloatList extends RepresentsNativeFloatList
+interface RepresentsMutableNativeFloatList extends RepresentsNativeFloatList, \ArrayAccess
 {
 	public function append( float...$values ): void;
 

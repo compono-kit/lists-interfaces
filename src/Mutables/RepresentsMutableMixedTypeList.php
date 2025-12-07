@@ -5,7 +5,7 @@ namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 use ComponoKit\Types\Interfaces\RepresentsType;
 use ComponoKit\Types\Lists\Interfaces\RepresentsMixedTypeList;
 
-interface RepresentsMutableMixedTypeList extends RepresentsMixedTypeList
+interface RepresentsMutableMixedTypeList extends RepresentsMixedTypeList, \ArrayAccess
 {
 	public function append( RepresentsType...$types ): void;
 

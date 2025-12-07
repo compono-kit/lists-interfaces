@@ -5,7 +5,7 @@ namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 use ComponoKit\Types\Lists\Interfaces\RepresentsNativeStringList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsStringList;
 
-interface RepresentsMutableNativeStringList extends RepresentsNativeStringList
+interface RepresentsMutableNativeStringList extends RepresentsNativeStringList, \ArrayAccess
 {
 	public function append( string...$values ): void;
 

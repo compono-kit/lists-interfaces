@@ -13,6 +13,8 @@ interface RepresentsImmutableMixedTypeList extends RepresentsMixedTypeList
 
 	public function remove( int $index ): static;
 
+	public function exists( int $index ): bool;
+
 	public function append( RepresentsType...$types ): static;
 
 	public function prepend( RepresentsType...$types ): static;

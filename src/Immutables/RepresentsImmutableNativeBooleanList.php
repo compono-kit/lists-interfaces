@@ -13,6 +13,8 @@ interface RepresentsImmutableNativeBooleanList extends RepresentsNativeBooleanLi
 
 	public function remove( int $index ): static;
 
+	public function exists( int $index ): bool;
+
 	public function append( bool...$values ): static;
 
 	public function prepend( bool...$values ): static;

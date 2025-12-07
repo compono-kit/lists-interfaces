@@ -13,6 +13,8 @@ interface RepresentsImmutableNativeFloatList extends RepresentsNativeFloatList
 
 	public function remove( int $index ): static;
 
+	public function exists( int $index ): bool;
+
 	public function append( float...$values ): static;
 
 	public function prepend( float...$values ): static;

@@ -13,6 +13,8 @@ interface RepresentsImmutableStringList extends RepresentsStringList
 
 	public function remove( int $index ): static;
 
+	public function exists( int $index ): bool;
+
 	public function append( RepresentsString...$types ): static;
 
 	public function prepend( RepresentsString...$types ): static;

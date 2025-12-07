@@ -13,6 +13,8 @@ interface RepresentsImmutableNativeIntegerList extends RepresentsNativeIntegerLi
 
 	public function remove( int $index ): static;
 
+	public function exists( int $index ): bool;
+
 	public function append( int...$values ): static;
 
 	public function prepend( int...$values ): static;

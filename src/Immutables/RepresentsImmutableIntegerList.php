@@ -13,6 +13,8 @@ interface RepresentsImmutableIntegerList extends RepresentsIntegerList
 
 	public function remove( int $index ): static;
 
+	public function exists( int $index ): bool;
+
 	public function append( RepresentsInteger...$types ): static;
 
 	public function prepend( RepresentsInteger...$types ): static;

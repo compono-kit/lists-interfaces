@@ -13,6 +13,8 @@ interface RepresentsImmutableBooleanList extends RepresentsBooleanList
 
 	public function remove( int $index ): static;
 
+	public function exists( int $index ): bool;
+
 	public function append( RepresentsBoolean...$types ): static;
 
 	public function prepend( RepresentsBoolean...$types ): static;

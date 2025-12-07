@@ -13,6 +13,8 @@ interface RepresentsImmutableFloatList extends RepresentsFloatList
 
 	public function remove( int $index ): static;
 
+	public function exists( int $index ): bool;
+
 	public function append( RepresentsFloat...$types ): static;
 
 	public function prepend( RepresentsFloat...$types ): static;

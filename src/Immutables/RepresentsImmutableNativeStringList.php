@@ -13,6 +13,8 @@ interface RepresentsImmutableNativeStringList extends RepresentsNativeStringList
 
 	public function remove( int $index ): static;
 
+	public function exists( int $index ): bool;
+
 	public function append( string...$values ): static;
 
 	public function prepend( string...$values ): static;

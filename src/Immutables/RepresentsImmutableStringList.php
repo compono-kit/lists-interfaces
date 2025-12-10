@@ -3,6 +3,7 @@
 namespace ComponoKit\Types\Lists\Interfaces\Immutables;
 
 use ComponoKit\Types\Interfaces\RepresentsString;
+use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
 use ComponoKit\Types\Lists\Interfaces\RepresentsStringList;
 
 interface RepresentsImmutableStringList extends RepresentsStringList
@@ -22,4 +23,14 @@ interface RepresentsImmutableStringList extends RepresentsStringList
 	public function appendList( RepresentsStringList $list ): static;
 
 	public function prependList( RepresentsStringList $list ): static;
+
+	public function reverse(): static;
+
+	public function shuffle(): static;
+
+	public function replace( int $index, RepresentsString $type ): static;
+
+	public function unique(): static;
+
+	public function sort( ComparesTypes $comparer ): static;
 }

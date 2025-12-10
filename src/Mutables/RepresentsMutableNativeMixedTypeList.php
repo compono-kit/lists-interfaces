@@ -2,6 +2,7 @@
 
 namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
+use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
 use ComponoKit\Types\Lists\Interfaces\RepresentsNativeMixedTypeList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsMixedTypeList;
 
@@ -14,4 +15,14 @@ interface RepresentsMutableNativeMixedTypeList extends RepresentsNativeMixedType
 	public function appendList( RepresentsNativeMixedTypeList|RepresentsMixedTypeList $list ): void;
 
 	public function prependList( RepresentsNativeMixedTypeList|RepresentsMixedTypeList $list ): void;
+
+	public function reverse(): void;
+
+	public function shuffle(): void;
+
+	public function replace( int $index, int|float|string|bool|array $value ): void;
+
+	public function unique(): void;
+
+	public function sort( ComparesTypes $comparer ): void;
 }

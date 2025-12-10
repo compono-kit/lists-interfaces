@@ -12,4 +12,29 @@ interface RepresentsNativeMixedTypeList extends RepresentsList
 	public function toNativeType(): array;
 
 	public function current(): int|float|string|bool|array;
+
+	public function first(): int|float|string|bool|array;
+
+	public function last(): int|float|string|bool|array;
+
+	public function diff( RepresentsNativeMixedTypeList $list ): RepresentsNativeMixedTypeList;
+
+	public function intersect( RepresentsNativeMixedTypeList $list ): RepresentsNativeMixedTypeList;
+
+	/**
+	 * @param int  $count
+	 * @param bool $preserveIndices
+	 *
+	 * @return \Iterator<int, RepresentsNativeMixedTypeList>
+	 */
+	public function split( int $count, bool $preserveIndices = false ): \Iterator;
+
+	/**
+	 * @param int      $index
+	 * @param int|null $count
+	 * @param bool     $preserveIndices
+	 *
+	 * @return \Iterator<int, RepresentsNativeMixedTypeList>
+	 */
+	public function slice( int $index, ?int $count = null, bool $preserveIndices = false ): \Iterator;
 }

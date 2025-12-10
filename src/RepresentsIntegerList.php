@@ -24,4 +24,29 @@ interface RepresentsIntegerList extends RepresentsList
 	public function iterateIntegers(): \Iterator;
 
 	public function current(): RepresentsInteger;
+
+	public function first(): RepresentsInteger;
+
+	public function last(): RepresentsInteger;
+
+	public function diff( RepresentsIntegerList $list ): RepresentsIntegerList;
+
+	public function intersect( RepresentsIntegerList $list ): RepresentsIntegerList;
+
+	/**
+	 * @param int  $count
+	 * @param bool $preserveIndices
+	 *
+	 * @return \Iterator<int, RepresentsIntegerList>
+	 */
+	public function split( int $count, bool $preserveIndices = false ): \Iterator;
+
+	/**
+	 * @param int      $index
+	 * @param int|null $count
+	 * @param bool     $preserveIndices
+	 *
+	 * @return \Iterator<int, RepresentsIntegerList>
+	 */
+	public function slice( int $index, ?int $count = null, bool $preserveIndices = false ): \Iterator;
 }

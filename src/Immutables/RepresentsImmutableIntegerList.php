@@ -3,6 +3,7 @@
 namespace ComponoKit\Types\Lists\Interfaces\Immutables;
 
 use ComponoKit\Types\Interfaces\RepresentsInteger;
+use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
 use ComponoKit\Types\Lists\Interfaces\RepresentsIntegerList;
 
 interface RepresentsImmutableIntegerList extends RepresentsIntegerList
@@ -22,4 +23,14 @@ interface RepresentsImmutableIntegerList extends RepresentsIntegerList
 	public function appendList( RepresentsIntegerList $list ): static;
 
 	public function prependList( RepresentsIntegerList $list ): static;
+
+	public function reverse(): static;
+
+	public function shuffle(): static;
+
+	public function replace( int $index, RepresentsInteger $type ): static;
+
+	public function unique(): static;
+
+	public function sort( ComparesTypes $comparer ): static;
 }

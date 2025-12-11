@@ -2,9 +2,9 @@
 
 namespace ComponoKit\Types\Lists\Interfaces;
 
-interface RepresentsNativeMixedTypeList extends RepresentsNativeValueList
+interface RepresentsNativeMixedValueList extends RepresentsNativeValueList
 {
-	public function equalsValues( RepresentsNativeMixedTypeList $list ): bool;
+	public function equalsValues( RepresentsNativeMixedValueList $list ): bool;
 
 	/**
 	 * @return array<int, int|float|string|bool|array>
@@ -17,15 +17,15 @@ interface RepresentsNativeMixedTypeList extends RepresentsNativeValueList
 
 	public function last(): int|float|string|bool|array;
 
-	public function diff( RepresentsNativeMixedTypeList $list ): RepresentsNativeMixedTypeList;
+	public function diff( RepresentsNativeMixedValueList $list ): RepresentsNativeMixedValueList;
 
-	public function intersect( RepresentsNativeMixedTypeList $list ): RepresentsNativeMixedTypeList;
+	public function intersect( RepresentsNativeMixedValueList $list ): RepresentsNativeMixedValueList;
 
 	/**
 	 * @param int  $count
 	 * @param bool $preserveIndices
 	 *
-	 * @return \Iterator<int, RepresentsNativeMixedTypeList>
+	 * @return \Iterator<int, RepresentsNativeMixedValueList>
 	 */
 	public function split( int $count, bool $preserveIndices = false ): \Iterator;
 
@@ -34,7 +34,7 @@ interface RepresentsNativeMixedTypeList extends RepresentsNativeValueList
 	 * @param int|null $count
 	 * @param bool     $preserveIndices
 	 *
-	 * @return \Iterator<int, RepresentsNativeMixedTypeList>
+	 * @return \Iterator<int, RepresentsNativeMixedValueList>
 	 */
 	public function slice( int $index, ?int $count = null, bool $preserveIndices = false ): \Iterator;
 }

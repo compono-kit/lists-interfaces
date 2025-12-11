@@ -2,7 +2,7 @@
 
 namespace ComponoKit\Types\Lists\Interfaces;
 
-interface RepresentsNativeMixedTypeList extends RepresentsList
+interface RepresentsNativeMixedTypeList extends RepresentsNativeValueList
 {
 	public function equalsValues( RepresentsNativeMixedTypeList $list ): bool;
 

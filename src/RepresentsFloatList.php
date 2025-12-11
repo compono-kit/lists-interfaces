@@ -4,7 +4,7 @@ namespace ComponoKit\Types\Lists\Interfaces;
 
 use ComponoKit\Types\Interfaces\RepresentsFloat;
 
-interface RepresentsFloatList extends RepresentsList
+interface RepresentsFloatList extends RepresentsTypeList
 {
 	public function equalsValues( RepresentsFloatList $list ): bool;
 

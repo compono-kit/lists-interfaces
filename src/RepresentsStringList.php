@@ -4,7 +4,7 @@ namespace ComponoKit\Types\Lists\Interfaces;
 
 use ComponoKit\Types\Interfaces\RepresentsString;
 
-interface RepresentsStringList extends RepresentsList
+interface RepresentsStringList extends RepresentsTypeList
 {
 	public function equalsValues( RepresentsStringList $list ): bool;
 

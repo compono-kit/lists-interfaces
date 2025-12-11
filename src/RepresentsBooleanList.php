@@ -4,7 +4,7 @@ namespace ComponoKit\Types\Lists\Interfaces;
 
 use ComponoKit\Types\Interfaces\RepresentsBoolean;
 
-interface RepresentsBooleanList extends RepresentsList
+interface RepresentsBooleanList extends RepresentsTypeList
 {
 	public function equalsValues( RepresentsBooleanList $list ): bool;
 

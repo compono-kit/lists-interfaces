@@ -2,7 +2,7 @@
 
 namespace ComponoKit\Types\Lists\Interfaces;
 
-interface RepresentsNativeBooleanList extends RepresentsList
+interface RepresentsNativeBooleanList extends RepresentsNativeValueList
 {
 	public function equalsValues( RepresentsNativeBooleanList $list ): bool;
 

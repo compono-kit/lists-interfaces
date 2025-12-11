@@ -8,7 +8,5 @@ interface RepresentsList extends RepresentsType, \Iterator, \Countable
 {
 	public function count(): int;
 
-	public function findIndex( MatchesType $matcher ):? int;
-
 	public function toJson( bool $pretty = false ): string;
 }

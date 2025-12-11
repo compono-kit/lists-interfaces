@@ -4,7 +4,7 @@ namespace ComponoKit\Types\Lists\Interfaces;
 
 use ComponoKit\Types\Interfaces\RepresentsType;
 
-interface RepresentsMixedTypeList extends RepresentsList
+interface RepresentsMixedTypeList extends RepresentsTypeList
 {
 	public function equalsValues( RepresentsMixedTypeList $list ): bool;
 

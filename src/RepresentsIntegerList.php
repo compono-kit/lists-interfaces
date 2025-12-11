@@ -4,7 +4,7 @@ namespace ComponoKit\Types\Lists\Interfaces;
 
 use ComponoKit\Types\Interfaces\RepresentsInteger;
 
-interface RepresentsIntegerList extends RepresentsList
+interface RepresentsIntegerList extends RepresentsTypeList
 {
 	public function equalsValues( RepresentsIntegerList $list ): bool;
 

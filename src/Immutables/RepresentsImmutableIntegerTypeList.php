@@ -4,9 +4,9 @@ namespace ComponoKit\Types\Lists\Interfaces\Immutables;
 
 use ComponoKit\Types\Interfaces\RepresentsInteger;
 use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
-use ComponoKit\Types\Lists\Interfaces\RepresentsIntegerList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsIntegerTypeList;
 
-interface RepresentsImmutableIntegerList extends RepresentsIntegerList
+interface RepresentsImmutableIntegerTypeList extends RepresentsIntegerTypeList
 {
 	public function exists( int $index ): bool;
 
@@ -20,9 +20,9 @@ interface RepresentsImmutableIntegerList extends RepresentsIntegerList
 
 	public function prepend( RepresentsInteger...$types ): static;
 
-	public function appendList( RepresentsIntegerList $list ): static;
+	public function appendList( RepresentsIntegerTypeList $list ): static;
 
-	public function prependList( RepresentsIntegerList $list ): static;
+	public function prependList( RepresentsIntegerTypeList $list ): static;
 
 	public function reverse(): static;
 

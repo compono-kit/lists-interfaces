@@ -4,17 +4,17 @@ namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
 use ComponoKit\Types\Interfaces\RepresentsInteger;
 use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
-use ComponoKit\Types\Lists\Interfaces\RepresentsIntegerList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsIntegerTypeList;
 
-interface RepresentsMutableIntegerList extends RepresentsIntegerList, \ArrayAccess
+interface RepresentsMutableIntegerTypeList extends RepresentsIntegerTypeList, \ArrayAccess
 {
 	public function append( RepresentsInteger...$types ): void;
 
 	public function prepend( RepresentsInteger...$types ): void;
 
-	public function appendList( RepresentsIntegerList $list ): void;
+	public function appendList( RepresentsIntegerTypeList $list ): void;
 
-	public function prependList( RepresentsIntegerList $list ): void;
+	public function prependList( RepresentsIntegerTypeList $list ): void;
 
 	public function reverse(): void;
 

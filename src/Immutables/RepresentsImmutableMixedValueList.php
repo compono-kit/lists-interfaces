@@ -4,9 +4,9 @@ namespace ComponoKit\Types\Lists\Interfaces\Immutables;
 
 use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
 use ComponoKit\Types\Lists\Interfaces\RepresentsMixedTypeList;
-use ComponoKit\Types\Lists\Interfaces\RepresentsNativeMixedValueList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsMixedValueList;
 
-interface RepresentsImmutableNativeMixedValueList extends RepresentsNativeMixedValueList
+interface RepresentsImmutableMixedValueList extends RepresentsMixedValueList
 {
 	public function exists( int $index ): bool;
 
@@ -20,9 +20,9 @@ interface RepresentsImmutableNativeMixedValueList extends RepresentsNativeMixedV
 
 	public function prepend( int|float|string|bool|array...$values ): static;
 
-	public function appendList( RepresentsNativeMixedValueList|RepresentsMixedTypeList $list ): static;
+	public function appendList( RepresentsMixedValueList|RepresentsMixedTypeList $list ): static;
 
-	public function prependList( RepresentsNativeMixedValueList|RepresentsMixedTypeList $list ): static;
+	public function prependList( RepresentsMixedValueList|RepresentsMixedTypeList $list ): static;
 
 	public function reverse(): static;
 

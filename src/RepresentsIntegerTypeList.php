@@ -4,9 +4,9 @@ namespace ComponoKit\Types\Lists\Interfaces;
 
 use ComponoKit\Types\Interfaces\RepresentsInteger;
 
-interface RepresentsIntegerList extends RepresentsTypeList
+interface RepresentsIntegerTypeList extends RepresentsTypeList
 {
-	public function equalsValues( RepresentsIntegerList $list ): bool;
+	public function equalsValues( RepresentsIntegerTypeList $list ): bool;
 
 	/**
 	 * @return array<int, RepresentsInteger>
@@ -29,15 +29,15 @@ interface RepresentsIntegerList extends RepresentsTypeList
 
 	public function last(): RepresentsInteger;
 
-	public function diff( RepresentsIntegerList $list ): RepresentsIntegerList;
+	public function diff( RepresentsIntegerTypeList $list ): RepresentsIntegerTypeList;
 
-	public function intersect( RepresentsIntegerList $list ): RepresentsIntegerList;
+	public function intersect( RepresentsIntegerTypeList $list ): RepresentsIntegerTypeList;
 
 	/**
 	 * @param int  $count
 	 * @param bool $preserveIndices
 	 *
-	 * @return \Iterator<int, RepresentsIntegerList>
+	 * @return \Iterator<int, RepresentsIntegerTypeList>
 	 */
 	public function split( int $count, bool $preserveIndices = false ): \Iterator;
 
@@ -46,7 +46,7 @@ interface RepresentsIntegerList extends RepresentsTypeList
 	 * @param int|null $count
 	 * @param bool     $preserveIndices
 	 *
-	 * @return \Iterator<int, RepresentsIntegerList>
+	 * @return \Iterator<int, RepresentsIntegerTypeList>
 	 */
 	public function slice( int $index, ?int $count = null, bool $preserveIndices = false ): \Iterator;
 }

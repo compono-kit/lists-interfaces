@@ -4,9 +4,9 @@ namespace ComponoKit\Types\Lists\Interfaces;
 
 use ComponoKit\Types\Interfaces\RepresentsFloat;
 
-interface RepresentsFloatList extends RepresentsTypeList
+interface RepresentsFloatTypeList extends RepresentsTypeList
 {
-	public function equalsValues( RepresentsFloatList $list ): bool;
+	public function equalsValues( RepresentsFloatTypeList $list ): bool;
 
 	/**
 	 * @return array<int, RepresentsFloat>
@@ -29,15 +29,15 @@ interface RepresentsFloatList extends RepresentsTypeList
 
 	public function last(): RepresentsFloat;
 
-	public function diff( RepresentsFloatList $list ): RepresentsFloatList;
+	public function diff( RepresentsFloatTypeList $list ): RepresentsFloatTypeList;
 
-	public function intersect( RepresentsFloatList $list ): RepresentsFloatList;
+	public function intersect( RepresentsFloatTypeList $list ): RepresentsFloatTypeList;
 
 	/**
 	 * @param int  $count
 	 * @param bool $preserveIndices
 	 *
-	 * @return \Iterator<int, RepresentsFloatList>
+	 * @return \Iterator<int, RepresentsFloatTypeList>
 	 */
 	public function split( int $count, bool $preserveIndices = false ): \Iterator;
 
@@ -46,7 +46,7 @@ interface RepresentsFloatList extends RepresentsTypeList
 	 * @param int|null $count
 	 * @param bool     $preserveIndices
 	 *
-	 * @return \Iterator<int, RepresentsFloatList>
+	 * @return \Iterator<int, RepresentsFloatTypeList>
 	 */
 	public function slice( int $index, ?int $count = null, bool $preserveIndices = false ): \Iterator;
 }

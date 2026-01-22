@@ -3,18 +3,18 @@
 namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
 use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
-use ComponoKit\Types\Lists\Interfaces\RepresentsBooleanList;
-use ComponoKit\Types\Lists\Interfaces\RepresentsNativeBooleanList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsBooleanTypeList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsBooleanValueList;
 
-interface RepresentsMutableNativeBooleanList extends RepresentsNativeBooleanList, \ArrayAccess
+interface RepresentsMutableBooleanValueList extends RepresentsBooleanValueList, \ArrayAccess
 {
 	public function append( bool...$values ): void;
 
 	public function prepend( bool...$values ): void;
 
-	public function appendList( RepresentsNativeBooleanList|RepresentsBooleanList $list ): void;
+	public function appendList( RepresentsBooleanValueList|RepresentsBooleanTypeList $list ): void;
 
-	public function prependList( RepresentsNativeBooleanList|RepresentsBooleanList $list ): void;
+	public function prependList( RepresentsBooleanValueList|RepresentsBooleanTypeList $list ): void;
 
 	public function reverse(): void;
 

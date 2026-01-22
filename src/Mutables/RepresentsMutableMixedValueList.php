@@ -3,18 +3,18 @@
 namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
 use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
-use ComponoKit\Types\Lists\Interfaces\RepresentsNativeMixedValueList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsMixedValueList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsMixedTypeList;
 
-interface RepresentsMutableNativeMixedValueList extends RepresentsNativeMixedValueList, \ArrayAccess
+interface RepresentsMutableMixedValueList extends RepresentsMixedValueList, \ArrayAccess
 {
 	public function append( int|float|string|bool|array...$values ): void;
 
 	public function prepend( int|float|string|bool|array...$values ): void;
 
-	public function appendList( RepresentsNativeMixedValueList|RepresentsMixedTypeList $list ): void;
+	public function appendList( RepresentsMixedValueList|RepresentsMixedTypeList $list ): void;
 
-	public function prependList( RepresentsNativeMixedValueList|RepresentsMixedTypeList $list ): void;
+	public function prependList( RepresentsMixedValueList|RepresentsMixedTypeList $list ): void;
 
 	public function reverse(): void;
 

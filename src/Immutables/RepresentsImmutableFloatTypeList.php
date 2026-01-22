@@ -4,9 +4,9 @@ namespace ComponoKit\Types\Lists\Interfaces\Immutables;
 
 use ComponoKit\Types\Interfaces\RepresentsFloat;
 use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
-use ComponoKit\Types\Lists\Interfaces\RepresentsFloatList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsFloatTypeList;
 
-interface RepresentsImmutableFloatList extends RepresentsFloatList
+interface RepresentsImmutableFloatTypeList extends RepresentsFloatTypeList
 {
 	public function exists( int $index ): bool;
 
@@ -20,9 +20,9 @@ interface RepresentsImmutableFloatList extends RepresentsFloatList
 
 	public function prepend( RepresentsFloat...$types ): static;
 
-	public function appendList( RepresentsFloatList $list ): static;
+	public function appendList( RepresentsFloatTypeList $list ): static;
 
-	public function prependList( RepresentsFloatList $list ): static;
+	public function prependList( RepresentsFloatTypeList $list ): static;
 
 	public function reverse(): static;
 

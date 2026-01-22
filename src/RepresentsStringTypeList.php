@@ -4,9 +4,9 @@ namespace ComponoKit\Types\Lists\Interfaces;
 
 use ComponoKit\Types\Interfaces\RepresentsString;
 
-interface RepresentsStringList extends RepresentsTypeList
+interface RepresentsStringTypeList extends RepresentsTypeList
 {
-	public function equalsValues( RepresentsStringList $list ): bool;
+	public function equalsValues( RepresentsStringTypeList $list ): bool;
 
 	/**
 	 * @return array<int, RepresentsString>
@@ -29,15 +29,15 @@ interface RepresentsStringList extends RepresentsTypeList
 
 	public function last(): RepresentsString;
 
-	public function diff( RepresentsStringList $list ): RepresentsStringList;
+	public function diff( RepresentsStringTypeList $list ): RepresentsStringTypeList;
 
-	public function intersect( RepresentsStringList $list ): RepresentsStringList;
+	public function intersect( RepresentsStringTypeList $list ): RepresentsStringTypeList;
 
 	/**
 	 * @param int  $count
 	 * @param bool $preserveIndices
 	 *
-	 * @return \Iterator<int, RepresentsStringList>
+	 * @return \Iterator<int, RepresentsStringTypeList>
 	 */
 	public function split( int $count, bool $preserveIndices = false ): \Iterator;
 
@@ -46,7 +46,7 @@ interface RepresentsStringList extends RepresentsTypeList
 	 * @param int|null $count
 	 * @param bool     $preserveIndices
 	 *
-	 * @return \Iterator<int, RepresentsStringList>
+	 * @return \Iterator<int, RepresentsStringTypeList>
 	 */
 	public function slice( int $index, ?int $count = null, bool $preserveIndices = false ): \Iterator;
 }

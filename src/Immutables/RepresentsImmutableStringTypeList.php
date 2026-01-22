@@ -4,9 +4,9 @@ namespace ComponoKit\Types\Lists\Interfaces\Immutables;
 
 use ComponoKit\Types\Interfaces\RepresentsString;
 use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
-use ComponoKit\Types\Lists\Interfaces\RepresentsStringList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsStringTypeList;
 
-interface RepresentsImmutableStringList extends RepresentsStringList
+interface RepresentsImmutableStringTypeList extends RepresentsStringTypeList
 {
 	public function exists( int $index ): bool;
 
@@ -20,9 +20,9 @@ interface RepresentsImmutableStringList extends RepresentsStringList
 
 	public function prepend( RepresentsString...$types ): static;
 
-	public function appendList( RepresentsStringList $list ): static;
+	public function appendList( RepresentsStringTypeList $list ): static;
 
-	public function prependList( RepresentsStringList $list ): static;
+	public function prependList( RepresentsStringTypeList $list ): static;
 
 	public function reverse(): static;
 

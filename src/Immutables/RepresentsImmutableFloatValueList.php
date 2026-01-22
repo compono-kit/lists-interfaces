@@ -3,10 +3,10 @@
 namespace ComponoKit\Types\Lists\Interfaces\Immutables;
 
 use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
-use ComponoKit\Types\Lists\Interfaces\RepresentsFloatList;
-use ComponoKit\Types\Lists\Interfaces\RepresentsNativeFloatList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsFloatTypeList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsFloatValueList;
 
-interface RepresentsImmutableNativeFloatList extends RepresentsNativeFloatList
+interface RepresentsImmutableFloatValueList extends RepresentsFloatValueList
 {
 	public function exists( int $index ): bool;
 
@@ -20,9 +20,9 @@ interface RepresentsImmutableNativeFloatList extends RepresentsNativeFloatList
 
 	public function prepend( float...$values ): static;
 
-	public function appendList( RepresentsNativeFloatList|RepresentsFloatList $list ): static;
+	public function appendList( RepresentsFloatValueList|RepresentsFloatTypeList $list ): static;
 
-	public function prependList( RepresentsNativeFloatList|RepresentsFloatList $list ): static;
+	public function prependList( RepresentsFloatValueList|RepresentsFloatTypeList $list ): static;
 
 	public function reverse(): static;
 

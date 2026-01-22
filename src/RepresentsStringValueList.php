@@ -2,9 +2,9 @@
 
 namespace ComponoKit\Types\Lists\Interfaces;
 
-interface RepresentsNativeStringList extends RepresentsNativeValueList
+interface RepresentsStringValueList extends RepresentsValueList
 {
-	public function equalsValues( RepresentsNativeStringList $list ): bool;
+	public function equalsValues( RepresentsStringValueList $list ): bool;
 
 	/**
 	 * @return array<int, string>
@@ -17,15 +17,15 @@ interface RepresentsNativeStringList extends RepresentsNativeValueList
 
 	public function last(): string;
 
-	public function diff( RepresentsNativeStringList $list ): RepresentsNativeStringList;
+	public function diff( RepresentsStringValueList $list ): RepresentsStringValueList;
 
-	public function intersect( RepresentsNativeStringList $list ): RepresentsNativeStringList;
+	public function intersect( RepresentsStringValueList $list ): RepresentsStringValueList;
 
 	/**
 	 * @param int  $count
 	 * @param bool $preserveIndices
 	 *
-	 * @return \Iterator<int, RepresentsNativeStringList>
+	 * @return \Iterator<int, RepresentsStringValueList>
 	 */
 	public function split( int $count, bool $preserveIndices = false ): \Iterator;
 
@@ -34,7 +34,7 @@ interface RepresentsNativeStringList extends RepresentsNativeValueList
 	 * @param int|null $count
 	 * @param bool     $preserveIndices
 	 *
-	 * @return \Iterator<int, RepresentsNativeStringList>
+	 * @return \Iterator<int, RepresentsStringValueList>
 	 */
 	public function slice( int $index, ?int $count = null, bool $preserveIndices = false ): \Iterator;
 }

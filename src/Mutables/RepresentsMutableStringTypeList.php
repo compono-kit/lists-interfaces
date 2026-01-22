@@ -4,17 +4,17 @@ namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
 use ComponoKit\Types\Interfaces\RepresentsString;
 use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
-use ComponoKit\Types\Lists\Interfaces\RepresentsStringList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsStringTypeList;
 
-interface RepresentsMutableStringList extends RepresentsStringList, \ArrayAccess
+interface RepresentsMutableStringTypeList extends RepresentsStringTypeList, \ArrayAccess
 {
 	public function append( RepresentsString...$types ): void;
 
 	public function prepend( RepresentsString...$types ): void;
 
-	public function appendList( RepresentsStringList $list ): void;
+	public function appendList( RepresentsStringTypeList $list ): void;
 
-	public function prependList( RepresentsStringList $list ): void;
+	public function prependList( RepresentsStringTypeList $list ): void;
 
 	public function reverse(): void;
 

@@ -3,18 +3,18 @@
 namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
 use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
-use ComponoKit\Types\Lists\Interfaces\RepresentsNativeStringList;
-use ComponoKit\Types\Lists\Interfaces\RepresentsStringList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsStringTypeList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsStringValueList;
 
-interface RepresentsMutableNativeStringList extends RepresentsNativeStringList, \ArrayAccess
+interface RepresentsMutableStringValueList extends RepresentsStringValueList, \ArrayAccess
 {
 	public function append( string...$values ): void;
 
 	public function prepend( string...$values ): void;
 
-	public function appendList( RepresentsNativeStringList|RepresentsStringList $list ): void;
+	public function appendList( RepresentsStringValueList|RepresentsStringTypeList $list ): void;
 
-	public function prependList( RepresentsNativeStringList|RepresentsStringList $list ): void;
+	public function prependList( RepresentsStringValueList|RepresentsStringTypeList $list ): void;
 
 	public function reverse(): void;
 

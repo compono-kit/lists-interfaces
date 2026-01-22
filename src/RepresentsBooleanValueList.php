@@ -2,9 +2,9 @@
 
 namespace ComponoKit\Types\Lists\Interfaces;
 
-interface RepresentsNativeBooleanList extends RepresentsNativeValueList
+interface RepresentsBooleanValueList extends RepresentsValueList
 {
-	public function equalsValues( RepresentsNativeBooleanList $list ): bool;
+	public function equalsValues( RepresentsBooleanValueList $list ): bool;
 
 	/**
 	 * @return array<int, bool>
@@ -17,15 +17,15 @@ interface RepresentsNativeBooleanList extends RepresentsNativeValueList
 
 	public function last(): bool;
 
-	public function diff( RepresentsNativeBooleanList $list ): RepresentsNativeBooleanList;
+	public function diff( RepresentsBooleanValueList $list ): RepresentsBooleanValueList;
 
-	public function intersect( RepresentsNativeBooleanList $list ): RepresentsNativeBooleanList;
+	public function intersect( RepresentsBooleanValueList $list ): RepresentsBooleanValueList;
 
 	/**
 	 * @param int  $count
 	 * @param bool $preserveIndices
 	 *
-	 * @return \Iterator<int, RepresentsNativeBooleanList>
+	 * @return \Iterator<int, RepresentsBooleanValueList>
 	 */
 	public function split( int $count, bool $preserveIndices = false ): \Iterator;
 
@@ -34,7 +34,7 @@ interface RepresentsNativeBooleanList extends RepresentsNativeValueList
 	 * @param int|null $count
 	 * @param bool     $preserveIndices
 	 *
-	 * @return \Iterator<int, RepresentsNativeBooleanList>
+	 * @return \Iterator<int, RepresentsBooleanValueList>
 	 */
 	public function slice( int $index, ?int $count = null, bool $preserveIndices = false ): \Iterator;
 }

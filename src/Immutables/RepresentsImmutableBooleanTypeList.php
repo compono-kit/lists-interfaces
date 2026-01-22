@@ -4,9 +4,9 @@ namespace ComponoKit\Types\Lists\Interfaces\Immutables;
 
 use ComponoKit\Types\Interfaces\RepresentsBoolean;
 use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
-use ComponoKit\Types\Lists\Interfaces\RepresentsBooleanList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsBooleanTypeList;
 
-interface RepresentsImmutableBooleanList extends RepresentsBooleanList
+interface RepresentsImmutableBooleanTypeList extends RepresentsBooleanTypeList
 {
 	public function exists( int $index ): bool;
 
@@ -20,9 +20,9 @@ interface RepresentsImmutableBooleanList extends RepresentsBooleanList
 
 	public function prepend( RepresentsBoolean...$types ): static;
 
-	public function appendList( RepresentsBooleanList $list ): static;
+	public function appendList( RepresentsBooleanTypeList $list ): static;
 
-	public function prependList( RepresentsBooleanList $list ): static;
+	public function prependList( RepresentsBooleanTypeList $list ): static;
 
 	public function reverse(): static;
 

@@ -2,9 +2,9 @@
 
 namespace ComponoKit\Types\Lists\Interfaces;
 
-interface RepresentsNativeFloatList extends RepresentsNativeValueList
+interface RepresentsFloatValueList extends RepresentsValueList
 {
-	public function equalsValues( RepresentsNativeFloatList $list ): bool;
+	public function equalsValues( RepresentsFloatValueList $list ): bool;
 
 	/**
 	 * @return array<int, float>
@@ -17,15 +17,15 @@ interface RepresentsNativeFloatList extends RepresentsNativeValueList
 
 	public function last(): float;
 
-	public function diff( RepresentsNativeFloatList $list ): RepresentsNativeFloatList;
+	public function diff( RepresentsFloatValueList $list ): RepresentsFloatValueList;
 
-	public function intersect( RepresentsNativeFloatList $list ): RepresentsNativeFloatList;
+	public function intersect( RepresentsFloatValueList $list ): RepresentsFloatValueList;
 
 	/**
 	 * @param int  $count
 	 * @param bool $preserveIndices
 	 *
-	 * @return \Iterator<int, RepresentsNativeFloatList>
+	 * @return \Iterator<int, RepresentsFloatValueList>
 	 */
 	public function split( int $count, bool $preserveIndices = false ): \Iterator;
 
@@ -34,7 +34,7 @@ interface RepresentsNativeFloatList extends RepresentsNativeValueList
 	 * @param int|null $count
 	 * @param bool     $preserveIndices
 	 *
-	 * @return \Iterator<int, RepresentsNativeFloatList>
+	 * @return \Iterator<int, RepresentsFloatValueList>
 	 */
 	public function slice( int $index, ?int $count = null, bool $preserveIndices = false ): \Iterator;
 }

@@ -3,18 +3,18 @@
 namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
 use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
-use ComponoKit\Types\Lists\Interfaces\RepresentsFloatList;
-use ComponoKit\Types\Lists\Interfaces\RepresentsNativeFloatList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsFloatTypeList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsFloatValueList;
 
-interface RepresentsMutableNativeFloatList extends RepresentsNativeFloatList, \ArrayAccess
+interface RepresentsMutableFloatValueList extends RepresentsFloatValueList, \ArrayAccess
 {
 	public function append( float...$values ): void;
 
 	public function prepend( float...$values ): void;
 
-	public function appendList( RepresentsNativeFloatList|RepresentsFloatList $list ): void;
+	public function appendList( RepresentsFloatValueList|RepresentsFloatTypeList $list ): void;
 
-	public function prependList( RepresentsNativeFloatList|RepresentsFloatList $list ): void;
+	public function prependList( RepresentsFloatValueList|RepresentsFloatTypeList $list ): void;
 
 	public function reverse(): void;
 

@@ -2,7 +2,7 @@
 
 namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
-use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
+use ComponoKit\Types\Lists\Interfaces\ComparesValues;
 use ComponoKit\Types\Lists\Interfaces\RepresentsFloatTypeList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsFloatValueList;
 
@@ -24,5 +24,5 @@ interface RepresentsMutableFloatValueList extends RepresentsFloatValueList, \Arr
 
 	public function unique(): void;
 
-	public function sort( ComparesTypes $comparer ): void;
+	public function sort( ComparesValues $comparer ): void;
 }

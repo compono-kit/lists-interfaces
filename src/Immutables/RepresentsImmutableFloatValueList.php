@@ -2,7 +2,7 @@
 
 namespace ComponoKit\Types\Lists\Interfaces\Immutables;
 
-use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
+use ComponoKit\Types\Lists\Interfaces\ComparesValues;
 use ComponoKit\Types\Lists\Interfaces\RepresentsFloatTypeList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsFloatValueList;
 
@@ -32,5 +32,5 @@ interface RepresentsImmutableFloatValueList extends RepresentsFloatValueList
 
 	public function unique(): static;
 
-	public function sort( ComparesTypes $comparer ): static;
+	public function sort( ComparesValues $comparer ): static;
 }

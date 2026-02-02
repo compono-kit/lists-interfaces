@@ -2,7 +2,7 @@
 
 namespace ComponoKit\Types\Lists\Interfaces\Immutables;
 
-use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
+use ComponoKit\Types\Lists\Interfaces\ComparesValues;
 use ComponoKit\Types\Lists\Interfaces\RepresentsIntegerTypeList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsIntegerValueList;
 
@@ -32,5 +32,5 @@ interface RepresentsImmutableIntegerValueList extends RepresentsIntegerValueList
 
 	public function unique(): static;
 
-	public function sort( ComparesTypes $comparer ): static;
+	public function sort( ComparesValues $comparer ): static;
 }

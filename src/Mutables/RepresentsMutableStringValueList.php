@@ -2,7 +2,7 @@
 
 namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
-use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
+use ComponoKit\Types\Lists\Interfaces\ComparesValues;
 use ComponoKit\Types\Lists\Interfaces\RepresentsStringTypeList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsStringValueList;
 
@@ -24,5 +24,5 @@ interface RepresentsMutableStringValueList extends RepresentsStringValueList, \A
 
 	public function unique(): void;
 
-	public function sort( ComparesTypes $comparer ): void;
+	public function sort( ComparesValues $comparer ): void;
 }

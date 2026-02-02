@@ -2,9 +2,9 @@
 
 namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
-use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
-use ComponoKit\Types\Lists\Interfaces\RepresentsMixedValueList;
+use ComponoKit\Types\Lists\Interfaces\ComparesValues;
 use ComponoKit\Types\Lists\Interfaces\RepresentsMixedTypeList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsMixedValueList;
 
 interface RepresentsMutableMixedValueList extends RepresentsMixedValueList, \ArrayAccess
 {
@@ -24,5 +24,5 @@ interface RepresentsMutableMixedValueList extends RepresentsMixedValueList, \Arr
 
 	public function unique(): void;
 
-	public function sort( ComparesTypes $comparer ): void;
+	public function sort( ComparesValues $comparer ): void;
 }

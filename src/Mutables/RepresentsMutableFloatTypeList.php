@@ -3,11 +3,13 @@
 namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
 use ComponoKit\Types\Interfaces\RepresentsFloat;
-use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
 use ComponoKit\Types\Lists\Interfaces\RepresentsFloatTypeList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsMutableTypeList;
 
-interface RepresentsMutableFloatTypeList extends RepresentsFloatTypeList, \ArrayAccess
+interface RepresentsMutableFloatTypeList extends RepresentsFloatTypeList, RepresentsMutableTypeList
 {
+	public function replace( int $index, RepresentsFloat $type ): void;
+
 	public function append( RepresentsFloat...$types ): void;
 
 	public function prepend( RepresentsFloat...$types ): void;
@@ -15,14 +17,4 @@ interface RepresentsMutableFloatTypeList extends RepresentsFloatTypeList, \Array
 	public function appendList( RepresentsFloatTypeList $list ): void;
 
 	public function prependList( RepresentsFloatTypeList $list ): void;
-
-	public function reverse(): void;
-
-	public function shuffle(): void;
-
-	public function replace( int $index, RepresentsFloat $type ): void;
-
-	public function unique(): void;
-
-	public function sort( ComparesTypes $comparer ): void;
 }

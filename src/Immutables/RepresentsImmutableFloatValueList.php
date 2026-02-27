@@ -2,19 +2,13 @@
 
 namespace ComponoKit\Types\Lists\Interfaces\Immutables;
 
-use ComponoKit\Types\Lists\Interfaces\ComparesValues;
 use ComponoKit\Types\Lists\Interfaces\RepresentsFloatTypeList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsFloatValueList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsImmutableValueList;
 
-interface RepresentsImmutableFloatValueList extends RepresentsFloatValueList
+interface RepresentsImmutableFloatValueList extends RepresentsFloatValueList, RepresentsImmutableValueList
 {
-	public function exists( int $index ): bool;
-
-	public function get( int $index ): float;
-
-	public function set( int $index, float $value ): static;
-
-	public function remove( int $index ): static;
+	public function replace( int $index, float $value ): static;
 
 	public function append( float...$values ): static;
 
@@ -23,14 +17,4 @@ interface RepresentsImmutableFloatValueList extends RepresentsFloatValueList
 	public function appendList( RepresentsFloatValueList|RepresentsFloatTypeList $list ): static;
 
 	public function prependList( RepresentsFloatValueList|RepresentsFloatTypeList $list ): static;
-
-	public function reverse(): static;
-
-	public function shuffle(): static;
-
-	public function replace( int $index, float $value ): static;
-
-	public function unique(): static;
-
-	public function sort( ComparesValues $comparer ): static;
 }

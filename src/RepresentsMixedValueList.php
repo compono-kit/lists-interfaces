@@ -4,6 +4,8 @@ namespace ComponoKit\Types\Lists\Interfaces;
 
 interface RepresentsMixedValueList extends RepresentsValueList
 {
+	public function get( int $index ): int|float|string|bool|array;
+
 	public function equalsValues( RepresentsMixedValueList $list ): bool;
 
 	/**

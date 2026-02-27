@@ -6,6 +6,8 @@ use ComponoKit\Types\Interfaces\RepresentsType;
 
 interface RepresentsList extends RepresentsType, \Iterator, \Countable
 {
+	public function exists( int $index ): bool;
+
 	public function count(): int;
 
 	public function toJson( bool $pretty = false ): string;

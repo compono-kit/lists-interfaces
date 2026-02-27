@@ -4,6 +4,8 @@ namespace ComponoKit\Types\Lists\Interfaces;
 
 interface RepresentsStringValueList extends RepresentsValueList
 {
+	public function get( int $index ): string;
+
 	public function equalsValues( RepresentsStringValueList $list ): bool;
 
 	/**

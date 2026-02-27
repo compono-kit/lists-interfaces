@@ -4,6 +4,8 @@ namespace ComponoKit\Types\Lists\Interfaces;
 
 interface RepresentsBooleanValueList extends RepresentsValueList
 {
+	public function get( int $index ): bool;
+
 	public function equalsValues( RepresentsBooleanValueList $list ): bool;
 
 	/**

@@ -2,19 +2,13 @@
 
 namespace ComponoKit\Types\Lists\Interfaces\Immutables;
 
-use ComponoKit\Types\Lists\Interfaces\ComparesValues;
 use ComponoKit\Types\Lists\Interfaces\RepresentsBooleanTypeList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsBooleanValueList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsImmutableValueList;
 
-interface RepresentsImmutableBooleanValueList extends RepresentsBooleanValueList
+interface RepresentsImmutableBooleanValueList extends RepresentsBooleanValueList, RepresentsImmutableValueList
 {
-	public function exists( int $index ): bool;
-
-	public function get( int $index ): bool;
-
-	public function set( int $index, bool $value ): static;
-
-	public function remove( int $index ): static;
+	public function replace( int $index, bool $value ): static;
 
 	public function append( bool...$values ): static;
 
@@ -23,14 +17,4 @@ interface RepresentsImmutableBooleanValueList extends RepresentsBooleanValueList
 	public function appendList( RepresentsBooleanValueList|RepresentsBooleanTypeList $list ): static;
 
 	public function prependList( RepresentsBooleanValueList|RepresentsBooleanTypeList $list ): static;
-
-	public function reverse(): static;
-
-	public function shuffle(): static;
-
-	public function replace( int $index, bool $value ): static;
-
-	public function unique(): static;
-
-	public function sort( ComparesValues $comparer ): static;
 }

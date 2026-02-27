@@ -6,6 +6,8 @@ use ComponoKit\Types\Interfaces\RepresentsString;
 
 interface RepresentsStringTypeList extends RepresentsTypeList
 {
+	public function get( int $index ): RepresentsString;
+
 	public function equalsValues( RepresentsStringTypeList $list ): bool;
 
 	/**

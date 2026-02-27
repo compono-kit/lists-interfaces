@@ -2,12 +2,14 @@
 
 namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
-use ComponoKit\Types\Lists\Interfaces\ComparesValues;
 use ComponoKit\Types\Lists\Interfaces\RepresentsFloatTypeList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsFloatValueList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsMutableValueList;
 
-interface RepresentsMutableFloatValueList extends RepresentsFloatValueList, \ArrayAccess
+interface RepresentsMutableFloatValueList extends RepresentsFloatValueList, RepresentsMutableValueList
 {
+	public function replace( int $index, float $value ): void;
+
 	public function append( float...$values ): void;
 
 	public function prepend( float...$values ): void;
@@ -15,14 +17,4 @@ interface RepresentsMutableFloatValueList extends RepresentsFloatValueList, \Arr
 	public function appendList( RepresentsFloatValueList|RepresentsFloatTypeList $list ): void;
 
 	public function prependList( RepresentsFloatValueList|RepresentsFloatTypeList $list ): void;
-
-	public function reverse(): void;
-
-	public function shuffle(): void;
-
-	public function replace( int $index, float $value ): void;
-
-	public function unique(): void;
-
-	public function sort( ComparesValues $comparer ): void;
 }

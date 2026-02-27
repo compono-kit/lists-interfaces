@@ -6,6 +6,8 @@ use ComponoKit\Types\Interfaces\RepresentsType;
 
 interface RepresentsMixedTypeList extends RepresentsTypeList
 {
+	public function get( int $index ): RepresentsType;
+
 	public function equalsValues( RepresentsMixedTypeList $list ): bool;
 
 	/**

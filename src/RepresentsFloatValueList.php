@@ -4,6 +4,8 @@ namespace ComponoKit\Types\Lists\Interfaces;
 
 interface RepresentsFloatValueList extends RepresentsValueList
 {
+	public function get( int $index ): float;
+
 	public function equalsValues( RepresentsFloatValueList $list ): bool;
 
 	/**

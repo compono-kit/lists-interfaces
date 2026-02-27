@@ -3,11 +3,13 @@
 namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
 use ComponoKit\Types\Interfaces\RepresentsInteger;
-use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
 use ComponoKit\Types\Lists\Interfaces\RepresentsIntegerTypeList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsMutableTypeList;
 
-interface RepresentsMutableIntegerTypeList extends RepresentsIntegerTypeList, \ArrayAccess
+interface RepresentsMutableIntegerTypeList extends RepresentsIntegerTypeList, RepresentsMutableTypeList
 {
+	public function replace( int $index, RepresentsInteger $type ): void;
+
 	public function append( RepresentsInteger...$types ): void;
 
 	public function prepend( RepresentsInteger...$types ): void;
@@ -15,14 +17,4 @@ interface RepresentsMutableIntegerTypeList extends RepresentsIntegerTypeList, \A
 	public function appendList( RepresentsIntegerTypeList $list ): void;
 
 	public function prependList( RepresentsIntegerTypeList $list ): void;
-
-	public function reverse(): void;
-
-	public function shuffle(): void;
-
-	public function replace( int $index, RepresentsInteger $type ): void;
-
-	public function unique(): void;
-
-	public function sort( ComparesTypes $comparer ): void;
 }

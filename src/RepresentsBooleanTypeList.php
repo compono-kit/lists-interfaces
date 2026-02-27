@@ -6,6 +6,8 @@ use ComponoKit\Types\Interfaces\RepresentsBoolean;
 
 interface RepresentsBooleanTypeList extends RepresentsTypeList
 {
+	public function get( int $index ): RepresentsBoolean;
+
 	public function equalsValues( RepresentsBooleanTypeList $list ): bool;
 
 	/**

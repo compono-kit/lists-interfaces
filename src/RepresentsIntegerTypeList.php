@@ -6,6 +6,8 @@ use ComponoKit\Types\Interfaces\RepresentsInteger;
 
 interface RepresentsIntegerTypeList extends RepresentsTypeList
 {
+	public function get( int $index ): RepresentsInteger;
+
 	public function equalsValues( RepresentsIntegerTypeList $list ): bool;
 
 	/**

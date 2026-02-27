@@ -4,6 +4,8 @@ namespace ComponoKit\Types\Lists\Interfaces;
 
 interface RepresentsIntegerValueList extends RepresentsValueList
 {
+	public function get( int $index ): int;
+
 	public function equalsValues( RepresentsIntegerValueList $list ): bool;
 
 	/**

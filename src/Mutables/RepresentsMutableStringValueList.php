@@ -2,12 +2,14 @@
 
 namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
-use ComponoKit\Types\Lists\Interfaces\ComparesValues;
+use ComponoKit\Types\Lists\Interfaces\RepresentsMutableValueList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsStringTypeList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsStringValueList;
 
-interface RepresentsMutableStringValueList extends RepresentsStringValueList, \ArrayAccess
+interface RepresentsMutableStringValueList extends RepresentsStringValueList, RepresentsMutableValueList
 {
+	public function replace( int $index, string $value ): void;
+
 	public function append( string...$values ): void;
 
 	public function prepend( string...$values ): void;
@@ -15,14 +17,4 @@ interface RepresentsMutableStringValueList extends RepresentsStringValueList, \A
 	public function appendList( RepresentsStringValueList|RepresentsStringTypeList $list ): void;
 
 	public function prependList( RepresentsStringValueList|RepresentsStringTypeList $list ): void;
-
-	public function reverse(): void;
-
-	public function shuffle(): void;
-
-	public function replace( int $index, string $value ): void;
-
-	public function unique(): void;
-
-	public function sort( ComparesValues $comparer ): void;
 }

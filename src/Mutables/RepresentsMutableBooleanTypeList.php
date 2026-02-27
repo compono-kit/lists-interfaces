@@ -3,11 +3,13 @@
 namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
 use ComponoKit\Types\Interfaces\RepresentsBoolean;
-use ComponoKit\Types\Lists\Interfaces\ComparesTypes;
 use ComponoKit\Types\Lists\Interfaces\RepresentsBooleanTypeList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsMutableTypeList;
 
-interface RepresentsMutableBooleanTypeList extends RepresentsBooleanTypeList, \ArrayAccess
+interface RepresentsMutableBooleanTypeList extends RepresentsBooleanTypeList, RepresentsMutableTypeList
 {
+	public function replace( int $index, RepresentsBoolean $type ): void;
+
 	public function append( RepresentsBoolean...$types ): void;
 
 	public function prepend( RepresentsBoolean...$types ): void;
@@ -15,14 +17,4 @@ interface RepresentsMutableBooleanTypeList extends RepresentsBooleanTypeList, \A
 	public function appendList( RepresentsBooleanTypeList $list ): void;
 
 	public function prependList( RepresentsBooleanTypeList $list ): void;
-
-	public function reverse(): void;
-
-	public function shuffle(): void;
-
-	public function replace( int $index, RepresentsBoolean $type ): void;
-
-	public function unique(): void;
-
-	public function sort( ComparesTypes $comparer ): void;
 }

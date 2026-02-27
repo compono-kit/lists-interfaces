@@ -6,6 +6,8 @@ use ComponoKit\Types\Interfaces\RepresentsFloat;
 
 interface RepresentsFloatTypeList extends RepresentsTypeList
 {
+	public function get( int $index ): RepresentsFloat;
+
 	public function equalsValues( RepresentsFloatTypeList $list ): bool;
 
 	/**

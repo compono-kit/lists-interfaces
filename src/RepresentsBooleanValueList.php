@@ -25,18 +25,16 @@ interface RepresentsBooleanValueList extends RepresentsValueList
 
 	/**
 	 * @param int  $count
-	 * @param bool $preserveIndices
 	 *
 	 * @return \Iterator<int, RepresentsBooleanValueList>
 	 */
-	public function split( int $count, bool $preserveIndices = false ): \Iterator;
+	public function split( int $count ): \Iterator;
 
 	/**
 	 * @param int      $index
 	 * @param int|null $count
-	 * @param bool     $preserveIndices
 	 *
 	 * @return \Iterator<int, RepresentsBooleanValueList>
 	 */
-	public function slice( int $index, ?int $count = null, bool $preserveIndices = false ): \Iterator;
+	public function slice( int $index, ?int $count = null ): \Iterator;
 }

@@ -29,12 +29,4 @@ interface RepresentsBooleanValueList extends RepresentsValueList
 	 * @return \Iterator<int, RepresentsBooleanValueList>
 	 */
 	public function split( int $count ): \Iterator;
-
-	/**
-	 * @param int      $index
-	 * @param int|null $count
-	 *
-	 * @return \Iterator<int, RepresentsBooleanValueList>
-	 */
-	public function slice( int $index, ?int $count = null ): \Iterator;
 }

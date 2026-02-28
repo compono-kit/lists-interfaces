@@ -29,12 +29,4 @@ interface RepresentsFloatValueList extends RepresentsValueList
 	 * @return \Iterator<int, RepresentsFloatValueList>
 	 */
 	public function split( int $count ): \Iterator;
-
-	/**
-	 * @param int      $index
-	 * @param int|null $count
-	 *
-	 * @return \Iterator<int, RepresentsFloatValueList>
-	 */
-	public function slice( int $index, ?int $count = null ): \Iterator;
 }

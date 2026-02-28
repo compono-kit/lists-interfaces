@@ -29,12 +29,4 @@ interface RepresentsStringValueList extends RepresentsValueList
 	 * @return \Iterator<int, RepresentsStringValueList>
 	 */
 	public function split( int $count ): \Iterator;
-
-	/**
-	 * @param int      $index
-	 * @param int|null $count
-	 *
-	 * @return \Iterator<int, RepresentsStringValueList>
-	 */
-	public function slice( int $index, ?int $count = null ): \Iterator;
 }

@@ -4,9 +4,9 @@ namespace ComponoKit\Types\Lists\Interfaces\Mutables;
 
 use ComponoKit\Types\Lists\Interfaces\RepresentsIntegerTypeList;
 use ComponoKit\Types\Lists\Interfaces\RepresentsIntegerValueList;
-use ComponoKit\Types\Lists\Interfaces\RepresentsMutableTypeList;
+use ComponoKit\Types\Lists\Interfaces\RepresentsMutableValueList;
 
-interface RepresentsMutableIntegerValueList extends RepresentsIntegerValueList, RepresentsMutableTypeList
+interface RepresentsMutableIntegerValueList extends RepresentsIntegerValueList, RepresentsMutableValueList
 {
 	public function replace( int $index, int $value ): void;
 

@@ -1,10 +1,10 @@
 # ComponoKit / Lists-Interfaces
 
-**Interfaces for strongly typed list objects for PHP 8.5+**
+**Interfaces for strongly typed list objects for PHP 8.0+**
 
 This package provides interfaces for a lightweight foundation for building *domain-driven*, *immutable*, and *type-safe* list objects in PHP.
 
 ## Requirements 
 
-* PHP 8.5+
+* PHP 8.0+
 * compono-kit/types-interfaces
